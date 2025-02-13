@@ -4,6 +4,7 @@ import { View, TextInput, Button, Text, StyleSheet } from 'react-native';
 
 
 const SignIn = ({navigation}) => {
+    console.log(navigation); 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
