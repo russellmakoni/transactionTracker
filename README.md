@@ -47,7 +47,7 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/russellmakoni/transactionTracker
    cd transactionTracker
    ```
 
@@ -81,6 +81,10 @@ If you need to reset the project to its initial state, run:
 ```bash
 npm run reset-project
 ```
+
+## Design Choices and Challenges
+
+In developing the Transaction Tracker application, I chose React Native as the framework due to its ability to create cross-platform applications for both iOS and Android, which significantly reduces development time and effort. However, I faced challenges due to my limited experience in mobile app development and React Native itself. This lack of familiarity made it difficult to navigate the complexities of mobile UI design and state management. Additionally, I encountered resource limitations, particularly in downloading essential software like Android Studio and AVD Manager, which are crucial for testing and deploying the application. To overcome these challenges, I utilized online resources and documentation extensively, engaged with community forums for troubleshooting, and focused on incremental learning by building small features before integrating them into the larger application.
 
 ## Learn More
 
