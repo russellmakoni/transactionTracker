@@ -1,12 +1,10 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-import { Platform } from 'react-native';
+
 import { FontAwesome } from '@expo/vector-icons'
-import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import TabBarBackground from '@/components/ui/TabBarBackground';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+
+
+
 
 export default function TabLayout() {
 
@@ -26,22 +24,12 @@ export default function TabLayout() {
       //  tabBarInactiveBackgroundColor: "grey",
         //tabBarActiveBackgroundColor:"white",
         tabBarInactiveTintColor:"black",
-        tabBarActiveTintColor:"blue",
+        tabBarActiveTintColor:'#1e90ff',
       }
     }
     >
-    <Tabs.Screen 
-name='home'
- 
-options={{
-    title: 'Home',
-    
-    headerShown:false,
-   tabBarIcon:({focused,color,size})=>(
-<FontAwesome name='home' color={color} size={24}/>
-   ),
-}}
-/>
+
+
 <Tabs.Screen 
 name='transaction'
  

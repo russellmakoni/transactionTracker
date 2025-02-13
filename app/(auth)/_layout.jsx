@@ -8,12 +8,11 @@ import { NavigationContainer } from '@react-navigation/native'
 const Authlayout = () => {
   
   
-  
-  <Stack>
+  return(
+  <Stack screenOptions={{headerShown:false}}>
                 <Stack.Screen name="auth/signIn" />
-                <Stack.Screen name="auth/signUp" />
-                <Stack.Screen name="tabs/home" />
                 <Stack.Screen name="tabs/transactionList" />
             </Stack>
-            
+  );
 }
+export default Authlayout

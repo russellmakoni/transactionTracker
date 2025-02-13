@@ -1,5 +1,5 @@
-import { View, Text, ImageBackground, StyleSheet } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { View, Text, ImageBackground, StyleSheet, ScrollView } from 'react-native';
+
 
 import React from 'react';
 import { Link } from 'expo-router';
@@ -11,27 +11,29 @@ import { NavigationContainer } from '@react-navigation/native';
 const Index = () => {
   return (
     
-    <NavigationContainer>
-      <SafeAreaView style={styles.container} edges={['left','right']} ><StatusBar style="light" />
+    
+      <SafeAreaView style={styles.container} edges={['left','right']} ><StatusBar Barstyle="light" />
 
 <ImageBackground source={require("../assets/images/mansucces.jpg")} resizeMode="cover" style={styles.imageBackground} >
+   <ScrollView style={styles.top}>
    <Text style={styles.headertext}> Welcome to Transaction Tracker
 </Text> 
-<Text>Thank you for choosing Transaction Tracker to manage your transactions. This onboarding process will guide you through setting up your account and getting started with the application.
-   </Text>
-
-      <Link href="signIn" style={styles.button}>
+<Text style={styles.introtext}>Thank you for choosing Transaction Tracker to manage your transactions. </Text>
+   </ScrollView>
+   <View style={styles.footer}>
+   <Link href="signIn" style={styles.button}>
          <Text style={styles.buttonText}>Log In</Text>
       </Link>
-      <Link href="signUp" style={styles.button}>
-         <Text style={styles.buttonText}>Sign Up</Text>
-      </Link>
-   
+      
+    
+   </View>
+
+      
 
 
 </ImageBackground>
       </SafeAreaView>
-    </NavigationContainer>
+  
 
 
       
@@ -45,23 +47,36 @@ const Index = () => {
 const styles = StyleSheet.create({
     container: { flex: 1,},
     imageBackground:{flex:1,
-        justifyContent:'center',
+      alignItems:'centre',  
+      
     },
     headertext: {color: 'white',
-        fontSize: 48,
-        fontFamily:'',
-        justifyContent:'centre',
+        fontSize: 24,
+      
+        justifyContent:'centre', 
+        textAlignVertical:'centre',
+        marginBottom:20,
+      
     },
+    top:{flex:1,
+      marginHorizontal: 10,
+      marginTop:60,
+     
+      
+    },
+    introtext:{color: 'white',},
     buttonContainer: {
         
         justifyContent: 'space-around',
         marginTop: 20,
     },
+    footer:{marginBottom:20,},
     button: {
         backgroundColor: '#1e90ff',
        
         borderRadius: 5,
-        alignItems: 'center',
+        alignItems: 'bottom',
+        justifyContent: 'center',
     
     
     marginHorizontal: 10,
@@ -71,9 +86,9 @@ const styles = StyleSheet.create({
     buttonText: {
         color: 'black',
         fontSize: 18,
-        justifyContent:'center',
-        alignContent:'center'
-    },
+        textAlign:'center',
+
+    }
 });
 
 export default Index

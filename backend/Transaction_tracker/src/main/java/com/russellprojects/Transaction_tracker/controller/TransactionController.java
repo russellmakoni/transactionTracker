@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:8081/",maxAge=30000)
 @RestController
 @RequestMapping("/v1")
 public class TransactionController {

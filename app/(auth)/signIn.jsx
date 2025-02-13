@@ -1,17 +1,18 @@
 
+import { router } from 'expo-router';
 import React, { useState } from 'react';
 import { View, TextInput, Button, Text, StyleSheet } from 'react-native';
 
 
-const SignIn = ({navigation}) => {
-    console.log(navigation); 
+const SignIn = () => {
+    
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
     const handleLogin = () => {
         if (username === 'test' && password === 'password') {
             // Navigate to the transaction list screen
-            navigation.navigate('TransactionList');
+           router.push('/(tabs)/transactionList');
         } else {
             alert('Invalid credentials');
         }

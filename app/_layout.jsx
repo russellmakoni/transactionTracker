@@ -5,11 +5,12 @@ import { Stack } from 'expo-router';
 
 const RootLayout = () =>  {
         return (
-            <Stack>
+            <Stack screenOptions={{headerShown:false}}>
                 <Stack.Screen name="auth/signIn" />
-                <Stack.Screen name="auth/signUp" />
-                <Stack.Screen name="tabs/home" />
-                <Stack.Screen name="tabs/transactionList" />
+               
+               
+               
             </Stack>
         );
       }
+export default RootLayout
